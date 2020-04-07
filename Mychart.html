@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head> 
+    <body>
+        <canvas id="myChart"></canvas>
+        <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'des statistiques de météo de la ville de Safi',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [18.2, 19, 20.6, 23.3, 24.6, 28.8, 27.6]
+                }]
+            },
+
+              // Configuration options go here
+               options: {}
+            });
+        </script>
+    </body>
+</html>
